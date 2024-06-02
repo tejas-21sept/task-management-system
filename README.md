@@ -29,48 +29,48 @@ In addition to traditional Django views, this project also includes REST APIs bu
 
 - **List all projects** (with pagination):
 
-  - Endpoint: `/api/projects/`
+  - Endpoint: `/api-projects/`
   - Method: `GET`
 
 - **Create a new project**:
 
-  - Endpoint: `/api/projects/`
+  - Endpoint: `/api-projects/`
   - Method: `POST`
 
 - **View a project** (including all tasks for the project):
 
-  - Endpoint: `/api/projects/<id>/`
+  - Endpoint: `/api-projects/<int:pk>/`
   - Method: `GET`
 
 - **Delete a project**:
-  - Endpoint: `/api/projects/<id>/`
+
+  - Endpoint: `/api-projects/<int:pk>/delete/`
   - Method: `DELETE`
+
+- **List all tasks for a specific project**:
+  - Endpoint: `/api-projects/<int:pk>/tasks/`
+  - Method: `GET`
 
 ### Tasks
 
 - **List all tasks** (with pagination):
 
-  - Endpoint: `/api/tasks/`
+  - Endpoint: `/api-tasks/`
   - Method: `GET`
 
 - **Create a new task**:
 
-  - Endpoint: `/api/tasks/`
+  - Endpoint: `/api-tasks/`
   - Method: `POST`
 
 - **View a task**:
 
-  - Endpoint: `/api/tasks/<id>/`
+  - Endpoint: `/api-tasks/<int:pk>/`
   - Method: `GET`
 
 - **Delete a task**:
-
-  - Endpoint: `/api/tasks/<id>/`
+  - Endpoint: `/api-tasks/<int:pk>/delete/`
   - Method: `DELETE`
-
-- **List all tasks for a specific project**:
-  - Endpoint: `/api/projects/<project_id>/tasks/`
-  - Method: `GET`
 
 ## Database Design
 
