@@ -7,12 +7,14 @@ This repository contains a Django-based task management system. The system allow
 ## Features
 
 ### Tasks
+
 - **List all the tasks**: View all tasks in the system.
 - **Create a new task**: Add a new task to a project.
 - **Delete a task**: Remove an existing task.
 - **Edit the task status**: Change the status of a task (TODO, WIP, ONHOLD, DONE).
 
 ### Projects
+
 - **List all the projects**: View all projects that have not ended.
 - **Create a new project**: Add a new project.
 - **Delete a project**: Remove an existing project.
@@ -22,6 +24,7 @@ This repository contains a Django-based task management system. The system allow
 ## Database Design
 
 ### Project
+
 - **Name**: The name of the project.
 - **Description**: A brief description of the project.
 - **Client**: Foreign key to the client.
@@ -29,6 +32,7 @@ This repository contains a Django-based task management system. The system allow
 - **EndDate**: The end date of the project.
 
 ### Task
+
 - **Name**: The name of the task.
 - **Description**: A brief description of the task.
 - **Project**: Foreign key to the project.
@@ -37,57 +41,61 @@ This repository contains a Django-based task management system. The system allow
 ## Setup and Installation
 
 1. **Clone the repository**:
+
    ```sh
    git clone https://github.com/yourusername/task-management-system.git
    cd task-management-system/task_management
 
+   ```
+
 2. **Create a virtual environment and activate it**:
-    i.Open a terminal:
 
-      - Windows: Open `Command Prompt` or `PowerShell`.
-      - macOS/Linux: Open a terminal window.
+   i.Open a terminal:
 
-    
-    ii. Navigate to the project directory:
+   - Windows: Open `Command Prompt` or `PowerShell`.
+   - macOS/Linux: Open a terminal window.
 
-      ```python
-        cd social_network_backend
-    
-      ```
+   ii. Navigate to the project directory:
 
+   ```python
+     cd social_network_backend
 
-    iii. Create the virtual environment:
+   ```
 
-      ```python
-        python -m venv venv
+   iii. Create the virtual environment:
 
-      ```
+   ```python
+     python -m venv venv
 
-    iv. Activate the virtual environment:
+   ```
 
+   iv. Activate the virtual environment:
 
-      ```python
+   ```python
 
-        source venv/bin/activate  # Linux/macOS
+     source venv/bin/activate  # Linux/macOS
 
-        venv\Scripts\activate.bat  # Windows 
+     venv\Scripts\activate.bat  # Windows
 
-      ```
-
+   ```
 
 3. **Install dependencies**:
 
-  ```pip
-    pip install -r requirements.txt
-  ``` 
+```pip
+  pip install -r requirements.txt
+```
 
 4. **Run the migrations**:
-    ```python
-        python manage.py makemigrations
-        python manage.py migrate
-    ``` 
 
-5. **Start the development server**:
-    ```python
-        python manage.py runserver
-    ``` 
+   ```python
+       python manage.py makemigrations
+       python manage.py migrate
+   ```
+
+5. **Create a .env file:**:
+   Create a .env file in the root directory of your project and copy the contents of .env.example into it.
+
+6. **Start the development server**:
+   ```python
+       python manage.py runserver
+   ```
