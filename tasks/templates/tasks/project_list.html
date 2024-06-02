@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projects</title>
+  </head>
+  <body>
+    <h1>Projects</h1>
+    <a href="{% url 'project_create' %}">New Project</a>
+    <ul>
+      {% for project in object_list %}
+      <li>
+        <a href="{% url 'project_detail' project.pk %}">{{ project.name }}</a>
+        <form action="{% url 'project_delete' project.pk %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

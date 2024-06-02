@@ -1,0 +1,13 @@
+{% extends "tasks/base.html" %}
+{% block title %}Confirm Delete{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Confirm Delete</h2>
+    <p>Are you sure you want to delete the task "{{ object.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm</button>
+        <a href="{% url 'project_tasks' object.project.id %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
