@@ -4,6 +4,8 @@
 
 This repository contains a Django-based task management system. The system allows users to manage projects and tasks, including creating, viewing, editing, and deleting tasks and projects. The primary features include task status management and project-specific task lists.
 
+In addition to traditional Django views, this project also includes REST APIs built using Django Rest Framework (DRF) for managing projects and tasks programmatically.
+
 ## Features
 
 ### Tasks
@@ -20,6 +22,55 @@ This repository contains a Django-based task management system. The system allow
 - **Delete a project**: Remove an existing project.
 - **View a project**: View details of a specific project.
 - **Show list of all the tasks for that particular project**: View tasks associated with a project.
+
+## REST API Endpoints
+
+### Projects
+
+- **List all projects** (with pagination):
+
+  - Endpoint: `/api-projects/`
+  - Method: `GET`
+
+- **Create a new project**:
+
+  - Endpoint: `/api-projects/`
+  - Method: `POST`
+
+- **View a project** (including all tasks for the project):
+
+  - Endpoint: `/api-projects/<int:pk>/`
+  - Method: `GET`
+
+- **Delete a project**:
+
+  - Endpoint: `/api-projects/<int:pk>/delete/`
+  - Method: `DELETE`
+
+- **List all tasks for a specific project**:
+  - Endpoint: `/api-projects/<int:pk>/tasks/`
+  - Method: `GET`
+
+### Tasks
+
+- **List all tasks** (with pagination):
+
+  - Endpoint: `/api-tasks/`
+  - Method: `GET`
+
+- **Create a new task**:
+
+  - Endpoint: `/api-tasks/`
+  - Method: `POST`
+
+- **View a task**:
+
+  - Endpoint: `/api-tasks/<int:pk>/`
+  - Method: `GET`
+
+- **Delete a task**:
+  - Endpoint: `/api-tasks/<int:pk>/delete/`
+  - Method: `DELETE`
 
 ## Database Design
 

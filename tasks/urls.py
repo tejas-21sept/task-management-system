@@ -5,11 +5,18 @@ from .views import (
     DeleteTaskView,
     HomePageView,
     ProjectCreateView,
+    ProjectDeleteAPIView,
     ProjectDeleteView,
+    ProjectDetailAPIView,
     ProjectDetailView,
+    ProjectListAPIView,
     ProjectListView,
+    ProjectTasksAPIView,
     ProjectTasksView,
     ProjectUpdateView,
+    TaskDeleteAPIView,
+    TaskDetailAPIView,
+    TaskListAPIView,
     UpdateTaskView,
 )
 
@@ -27,4 +34,21 @@ urlpatterns = [
     path("task/<int:pk>/delete/", DeleteTaskView.as_view(), name="delete_task"),
     path("tasks/update/<int:task_id>/", UpdateTaskView.as_view(), name="update_task"),
     path("tasks/delete/<int:task_id>/", DeleteTaskView.as_view(), name="delete_task"),
+    path("api-projects/", ProjectListAPIView.as_view(), name="project-list"),
+    path(
+        "api-projects/<int:pk>/", ProjectDetailAPIView.as_view(), name="project-detail"
+    ),
+    path(
+        "api-projects/<int:pk>/delete/",
+        ProjectDeleteAPIView.as_view(),
+        name="project-delete",
+    ),
+    path("api-tasks/", TaskListAPIView.as_view(), name="task-list"),
+    path("api-tasks/<int:pk>/", TaskDetailAPIView.as_view(), name="task-detail"),
+    path("api-tasks/<int:pk>/delete/", TaskDeleteAPIView.as_view(), name="task-delete"),
+    path(
+        "api-projects/<int:pk>/tasks/",
+        ProjectTasksAPIView.as_view(),
+        name="project-tasks",
+    ),
 ]
