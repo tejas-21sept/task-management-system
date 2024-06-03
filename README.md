@@ -94,7 +94,7 @@ In addition to traditional Django views, this project also includes REST APIs bu
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/yourusername/task-management-system.git
+   git clone https://github.com/tejas-21sept/task-management-system.git
    cd task-management-system/task_management
 
    ```
