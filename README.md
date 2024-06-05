@@ -150,3 +150,12 @@ In addition to traditional Django views, this project also includes REST APIs bu
    ```python
        python manage.py runserver
    ```
+
+## Suggestions and Improvements
+
+Feedback, suggestions, and contributions to enhance this project are highly appreciated! If you have any ideas to improve the functionality, add new features, or fix issues, please don't hesitate to reach out or submit a pull request.
+
+## Contact
+
+For any inquiries or assistance, feel free to reach out via email at [tejasj.1022@gmail.com](mailto:tejasj.1022@gmail.com). Your feedback is valuable and will be promptly addressed.
+
